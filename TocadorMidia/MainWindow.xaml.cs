@@ -155,7 +155,9 @@ namespace TocadorMidia
                  if (Tocador.Source == current)
                  {
                      Tocador.Source = new Uri(files[i + 1]);
-                     break;
+                     Nome_arquivo.Content = System.IO.Path.GetFileName(files[i + 1]);
+                     Título.Content = "Título: " + System.IO.Path.GetFileName(files[i + 1]);
+                    break;
                  }
              }
         }
@@ -172,26 +174,6 @@ namespace TocadorMidia
         private void timelineSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             lblProgressStatus.Text = TimeSpan.FromSeconds(timelineSlider.Value).ToString(@"hh\:mm\:ss");
-        }
-
-        private void btnMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            WindowState = WindowState.Minimized;
-        }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void Criar_Playlist_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Compartilhar_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void MoveUp_Click(object sender, RoutedEventArgs e)

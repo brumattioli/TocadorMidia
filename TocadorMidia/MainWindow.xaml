@@ -27,7 +27,7 @@
         </Border>
 
         <MediaElement HorizontalAlignment="Left" Name="Tocador" Margin="0,61,0,-390" Width="646" MediaOpened="Tocador_MediaOpened" MediaEnded="Tocador_MediaEnded"/>
-        <StatusBar Margin="2,423,315,-423">
+        <StatusBar Margin="2,423,175,-423">
             <StatusBar.ItemsPanel>
                 <ItemsPanelTemplate>
                     <Grid>
@@ -39,7 +39,7 @@
                     </Grid>
                 </ItemsPanelTemplate>
             </StatusBar.ItemsPanel>
-            <StatusBarItem>
+            <StatusBarItem Margin="0,0,-2,0">
                 <TextBlock Name="lblProgressStatus">00:00:00</TextBlock>
             </StatusBarItem>
             <Slider Name="timelineSlider" Thumb.DragStarted="timelineSlider_DragStarted" Thumb.DragCompleted="timelineSlider_DragCompleted" ValueChanged="timelineSlider_ValueChanged" Width="600" Margin="55,0,0,0"/>
